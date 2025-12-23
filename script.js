@@ -954,9 +954,10 @@ async function updateDashboard(pol, met) {
   if (visIcon) visIcon.className = "weather-icon vis-icon";
   checkAQIWarning(pol.aqi);
   const selected = localStorage.getItem("eco_loc_name");
-  if (selected) {
-    document.getElementById("current-station").textContent = selected;
-  }
+  const stationEl = document.getElementById("current-station");
+if (stationEl && selected) {
+  stationEl.textContent = selected;
+}
   renderMiniChart();
 }
 function openFavModal() {
