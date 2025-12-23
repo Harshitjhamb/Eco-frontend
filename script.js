@@ -1298,7 +1298,10 @@ function initDropdown() {
         localStorage.setItem("eco_loc_name", name);
 
         // ✅ update heading instantly
-        document.getElementById("current-station").textContent = name;
+        const stationEl = document.getElementById("current-station");
+if (stationEl) {
+  stationEl.textContent = name;
+}
 
         // ✅ refresh dashboard for this station
         updateDashboard();
