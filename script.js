@@ -1,6 +1,7 @@
 const BACKEND_BASE = "https://ecometrics-1.onrender.com";
 const API_URL = "https://ecometrics-1.onrender.com/api/combined_data";
 const API_BASE = "https://ecometrics-1.onrender.com";
+
 function removeDuplicates(rows) {
   const seen = new Set();
   return rows.filter(r => {
@@ -1303,9 +1304,6 @@ function initDropdown() {
 if (stationEl) {
   stationEl.textContent = name;
 }
-
-        // ✅ refresh dashboard for this station
-        updateDashboard();
 
         list.style.display = "none";
       };
