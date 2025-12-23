@@ -1,5 +1,5 @@
-const BACKEND_BASE = "http://127.0.0.1:5001";
-const API_URL = "http://127.0.0.1:5001/api/combined_data";
+const BACKEND_BASE = "https://ecometrics-1.onrender.com";
+const API_URL = "https://ecometrics-1.onrender.com/api/combined_data";
 const API_BASE = "https://ecometrics-1.onrender.com";
 function removeDuplicates(rows) {
   const seen = new Set();
