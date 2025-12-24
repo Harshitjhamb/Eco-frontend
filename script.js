@@ -1,7 +1,6 @@
-const BACKEND_BASE = "https://ecometrics-1.onrender.com";
-const API_URL = "https://ecometrics-1.onrender.com/api/combined_data";
+const BACKEND_BASE = "http://127.0.0.1:5001";
+const API_URL = "http://127.0.0.1:5001/api/combined_data";
 const API_BASE = "https://ecometrics-1.onrender.com";
-
 function removeDuplicates(rows) {
   const seen = new Set();
   return rows.filter(r => {
@@ -955,10 +954,9 @@ async function updateDashboard(pol, met) {
   if (visIcon) visIcon.className = "weather-icon vis-icon";
   checkAQIWarning(pol.aqi);
   const selected = localStorage.getItem("eco_loc_name");
-  const stationEl = document.getElementById("current-station");
-if (stationEl && selected) {
-  stationEl.textContent = selected;
-}
+  if (selected) {
+    document.getElementById("current-station").textContent = selected;
+  }
   renderMiniChart();
 }
 function openFavModal() {
@@ -1300,10 +1298,9 @@ function initDropdown() {
         localStorage.setItem("eco_loc_name", name);
 
         // ✅ update heading instantly
-        const stationEl = document.getElementById("current-station");
-if (stationEl) {
-  stationEl.textContent = name;
-}
+        document.getElementById("current-station").textContent = name;
+
+        // ✅ refresh dashboard for this station
 
         list.style.display = "none";
       };
