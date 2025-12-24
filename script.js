@@ -1,5 +1,5 @@
 const BACKEND_BASE = "https://ecometrics-1.onrender.com";
-const API_URL = "https://ecometrics-1.onrender.com";
+const API_URL = "https://ecometrics-1.onrender.com/api/combined_data";
 const API_BASE = "https://ecometrics-1.onrender.com";
 function removeDuplicates(rows) {
   const seen = new Set();
@@ -1298,9 +1298,11 @@ function initDropdown() {
         localStorage.setItem("eco_loc_name", name);
 
         // ✅ update heading instantly
-        document.getElementById("current-station").textContent = name;
+const stationEl = document.getElementById("current-station");
+if (stationEl) stationEl.textContent = name;
 
         // ✅ refresh dashboard for this station
+
 
         list.style.display = "none";
       };
