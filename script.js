@@ -1,6 +1,7 @@
 const BACKEND_BASE = "https://ecometrics-1.onrender.com";
 const API_URL = "http://ecometrics-1.onrender.com/api/combined_data";
 const API_BASE = "https://ecometrics-1.onrender.com";
+console.log("SCRIPT VERSION 2025-01-24 03:20");
 function removeDuplicates(rows) {
   const seen = new Set();
   return rows.filter(r => {
