@@ -1,5 +1,5 @@
 const BACKEND_BASE = "https://ecometrics-1.onrender.com";
-const API_URL = "https://ecometrics-1.onrender.com/api/combined_data";
+const API_URL = "http://ecometrics-1.onrender.com/api/combined_data";
 const API_BASE = "https://ecometrics-1.onrender.com";
 function removeDuplicates(rows) {
   const seen = new Set();
@@ -729,7 +729,7 @@ function buildAndRunAdvancedSearch() {
   /* ----------------------------------
      7) SEND TO BACKEND
   ---------------------------------- */
-  fetch(`${BACKEND_BASE}/api/adv_search`, {
+  fetch(`${BACKEND_BASE}/adv_search`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ query: sql })
