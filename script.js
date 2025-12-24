@@ -384,7 +384,7 @@ async function handleLogin() {
     age: age
   };
 
-  await fetch(`${API_BASE}/register_user`, {
+  await fetch(`${API_BASE}/api/register_user`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(userData)
